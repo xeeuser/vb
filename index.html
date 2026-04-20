@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Xuneel Services — Full Stack App Development Studio. Enterprise-grade delivery across 30 service domains." />
+  <meta name="author" content="Sunil Sharma, Xuneel Services" />
+  <meta property="og:title" content="Xuneel Services — Full Stack App Development Studio" />
+  <meta property="og:description" content="300+ Micro-Details · 30 Service Domains · Enterprise-Grade Delivery" />
+  <title>Xuneel Services — Full Stack App Development Studio</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@300;400;500&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- ░░ NOISE TEXTURE OVERLAY ░░ -->
+  <div class="noise-overlay" aria-hidden="true"></div>
+
+  <!-- ░░ CURSOR ░░ -->
+  <div class="cursor" id="cursor" aria-hidden="true"></div>
+  <div class="cursor-follower" id="cursorFollower" aria-hidden="true"></div>
+
+  <!-- ════════════════════════════
+       NAVIGATION
+  ════════════════════════════ -->
+  <header class="nav-wrap" id="navbar">
+    <nav class="nav-inner">
+      <!-- Logo -->
+      <a href="#" class="nav-logo" aria-label="Xuneel Services Home">
+        <svg class="logo-icon" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M5 5L25 30L5 55H18L30 38L42 55H55L35 30L55 5H42L30 22L18 5H5Z" fill="currentColor"/>
+          <path d="M5 5L25 30L5 55H18L30 38L42 55H55L35 30L55 5H42L30 22L18 5H5Z" fill="url(#logoGrad)" opacity="0.5"/>
+          <defs>
+            <linearGradient id="logoGrad" x1="5" y1="5" x2="55" y2="55" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#4B8EF1"/>
+              <stop offset="100%" stop-color="#1A4BB8"/>
+            </linearGradient>
+          </defs>
+        </svg>
+        <span class="logo-wordmark">XUNEEL</span>
+      </a>
+
+      <!-- Nav Links -->
+      <ul class="nav-links" role="list">
+        <li><a href="#services" class="nav-link">Services</a></li>
+        <li><a href="#stack" class="nav-link">Stack</a></li>
+        <li><a href="#process" class="nav-link">Process</a></li>
+        <li><a href="#metrics" class="nav-link">Quality</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <!-- CTA -->
+      <a href="mailto:hello.xuneel@gmail.com" class="nav-cta" aria-label="Start a project with Xuneel">
+        <span>Start Project</span>
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+          <path d="M2 7H12M12 7L7 2M12 7L7 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+
+      <!-- Mobile Hamburger -->
+      <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+      <ul role="list">
+        <li><a href="#services" class="mobile-link">Services</a></li>
+        <li><a href="#stack" class="mobile-link">Stack</a></li>
+        <li><a href="#process" class="mobile-link">Process</a></li>
+        <li><a href="#metrics" class="mobile-link">Quality</a></li>
+        <li><a href="#contact" class="mobile-link">Contact</a></li>
+        <li><a href="mailto:hello.xuneel@gmail.com" class="mobile-link mobile-cta">hello.xuneel@gmail.com</a></li>
+      </ul>
+    </div>
+  </header>
+
+
+  <!-- ════════════════════════════
+       HERO
+  ════════════════════════════ -->
+  <section class="hero" id="hero" aria-labelledby="hero-heading">
+
+    <!-- Background grid lines -->
+    <div class="hero-grid" aria-hidden="true">
+      <div class="grid-line"></div><div class="grid-line"></div>
+      <div class="grid-line"></div><div class="grid-line"></div>
+      <div class="grid-line"></div><div class="grid-line"></div>
+    </div>
+
+    <!-- Glowing orb -->
+    <div class="hero-orb" aria-hidden="true"></div>
+    <div class="hero-orb hero-orb--2" aria-hidden="true"></div>
+
+    <div class="hero-inner">
+
+      <!-- Badge -->
+      <div class="hero-badge reveal" aria-label="Studio specialization">
+        <span class="badge-dot" aria-hidden="true"></span>
+        Full Stack App Development Studio
+      </div>
+
+      <!-- Main heading -->
+      <h1 class="hero-heading reveal reveal--delay-1" id="hero-heading">
+        <span class="hero-line">We Architect</span>
+        <span class="hero-line hero-line--accent">
+          <span class="word-anim" aria-hidden="true">Solutions</span>
+          <span class="word-visible">Solutions</span>
+        </span>
+        <span class="hero-line">Not Just</span>
+        <span class="hero-line">Software.</span>
+      </h1>
+
+      <!-- Subtext -->
+      <p class="hero-sub reveal reveal--delay-2">
+        From strategy to deployment — <strong>Xuneel</strong> delivers enterprise-grade products
+        across 30 service domains with 300+ micro-details baked in.
+      </p>
+
+      <!-- Hero CTA row -->
+      <div class="hero-actions reveal reveal--delay-3">
+        <a href="#contact" class="btn-primary">
+          <span>Start Your Project</span>
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <path d="M3 8H13M13 8L8 3M13 8L8 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+        <a href="#services" class="btn-ghost">Explore Services</a>
+      </div>
+
+      <!-- Stat strip -->
+      <div class="hero-stats reveal reveal--delay-4" role="list" aria-label="Key statistics">
+        <div class="stat" role="listitem">
+          <span class="stat-number" data-target="300">0</span><span class="stat-plus">+</span>
+          <span class="stat-label">Micro-Details</span>
+        </div>
+        <div class="stat-divider" aria-hidden="true"></div>
+        <div class="stat" role="listitem">
+          <span class="stat-number" data-target="30">0</span>
+          <span class="stat-label">Service Domains</span>
+        </div>
+        <div class="stat-divider" aria-hidden="true"></div>
+        <div class="stat" role="listitem">
+          <span class="stat-number" data-target="99">0</span><span class="stat-plus">.9%</span>
+          <span class="stat-label">Uptime SLA</span>
+        </div>
+        <div class="stat-divider" aria-hidden="true"></div>
+        <div class="stat" role="listitem">
+          <span class="stat-number" data-target="100">0</span>
+          <span class="stat-label">Lighthouse Score</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Floating tech tags -->
+    <div class="hero-tags" aria-hidden="true">
+      <span class="tag tag--float-1">React · Next.js</span>
+      <span class="tag tag--float-2">Node.js · FastAPI</span>
+      <span class="tag tag--float-3">AWS · Docker · K8s</span>
+      <span class="tag tag--float-4">PostgreSQL · Redis</span>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="scroll-hint" aria-label="Scroll down">
+      <span class="scroll-hint-line"></span>
+      <span class="scroll-hint-text">Scroll</span>
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════
+       MARQUEE
+  ════════════════════════════ -->
+  <div class="marquee-wrap" aria-hidden="true">
+    <div class="marquee-track">
+      <span>Strategy</span><span class="dot">·</span>
+      <span>UX Research</span><span class="dot">·</span>
+      <span>UI Design</span><span class="dot">·</span>
+      <span>Frontend Dev</span><span class="dot">·</span>
+      <span>Backend APIs</span><span class="dot">·</span>
+      <span>DevOps</span><span class="dot">·</span>
+      <span>Security</span><span class="dot">·</span>
+      <span>Mobile</span><span class="dot">·</span>
+      <span>CMS</span><span class="dot">·</span>
+      <span>Analytics</span><span class="dot">·</span>
+      <span>Scaling</span><span class="dot">·</span>
+      <span>Maintenance</span><span class="dot">·</span>
+      <!-- duplicate for seamless loop -->
+      <span>Strategy</span><span class="dot">·</span>
+      <span>UX Research</span><span class="dot">·</span>
+      <span>UI Design</span><span class="dot">·</span>
+      <span>Frontend Dev</span><span class="dot">·</span>
+      <span>Backend APIs</span><span class="dot">·</span>
+      <span>DevOps</span><span class="dot">·</span>
+      <span>Security</span><span class="dot">·</span>
+      <span>Mobile</span><span class="dot">·</span>
+      <span>CMS</span><span class="dot">·</span>
+      <span>Analytics</span><span class="dot">·</span>
+      <span>Scaling</span><span class="dot">·</span>
+      <span>Maintenance</span><span class="dot">·</span>
+    </div>
+  </div>
+
+
+  <!-- ════════════════════════════
+       WHO WE ARE
+  ════════════════════════════ -->
+  <section class="about" id="about" aria-labelledby="about-heading">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-left">
+          <span class="section-tag reveal">Who We Are</span>
+          <h2 class="section-heading reveal reveal--delay-1" id="about-heading">
+            One Studio.<br/>Full Ownership.
+          </h2>
+          <p class="section-body reveal reveal--delay-2">
+            Xuneel is a full-stack development studio led by <strong>Sunil Sharma</strong>,
+            Founder & Lead Architect. We don't outsource, scatter, or cut corners.
+            Every project is architected end-to-end — from deep discovery sessions to
+            post-launch performance monitoring.
+          </p>
+          <a href="mailto:hello.xuneel@gmail.com" class="btn-primary reveal reveal--delay-3">
+            <span>hello.xuneel@gmail.com</span>
+          </a>
+        </div>
+
+        <div class="about-right">
+          <div class="about-card reveal reveal--delay-1">
+            <div class="about-card-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+            </div>
+            <h3>Strategic Vision</h3>
+            <p>Deep discovery, competitor analysis, and a value proposition canvas tailored to your market before a line of code is written.</p>
+          </div>
+
+          <div class="about-card reveal reveal--delay-2">
+            <div class="about-card-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.5"/><path d="M12 2V5M12 19V22M2 12H5M19 12H22M4.22 4.22L6.34 6.34M17.66 17.66L19.78 19.78M19.78 4.22L17.66 6.34M6.34 17.66L4.22 19.78" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </div>
+            <h3>End-to-End Delivery</h3>
+            <p>Pixel-perfect UI to bulletproof APIs, database architecture, DevOps pipelines, and post-launch maintenance — all under one roof.</p>
+          </div>
+
+          <div class="about-card reveal reveal--delay-3">
+            <div class="about-card-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+            </div>
+            <h3>Scale-Ready Output</h3>
+            <p>Microservices, CDN distribution, Redis caching, auto-scaling infrastructure, and multi-region deployment as standard from day one.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════
+       SERVICES
+  ════════════════════════════ -->
+  <section class="services" id="services" aria-labelledby="services-heading">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag reveal">What We Build</span>
+        <h2 class="section-heading reveal reveal--delay-1" id="services-heading">
+          30 Service Domains.<br/>One Partner.
+        </h2>
+        <p class="section-intro reveal reveal--delay-2">
+          Every engagement is scoped, designed, built, tested, and deployed by experts — never fragmented across vendors.
+        </p>
+      </div>
+
+      <div class="services-grid">
+
+        <article class="service-card reveal" tabindex="0" aria-label="Discovery and Strategy service">
+          <div class="service-card-num" aria-hidden="true">01</div>
+          <div class="service-card-icon" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><circle cx="14" cy="14" r="12" stroke="currentColor" stroke-width="1.5"/><path d="M14 8V14L18 16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </div>
+          <h3 class="service-card-title">Discovery & Strategy</h3>
+          <p class="service-card-body">User persona definition, market analysis, value proposition canvas, revenue model identification, KPI planning, and risk assessment.</p>
+          <ul class="service-card-tags" aria-label="Service details">
+            <li>MoSCoW Prioritization</li>
+            <li>Competitor Analysis</li>
+            <li>Milestone Planning</li>
+          </ul>
+        </article>
+
+        <article class="service-card reveal reveal--delay-1" tabindex="0" aria-label="UX Research and Wireframing service">
+          <div class="service-card-num" aria-hidden="true">02</div>
+          <div class="service-card-icon" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="4" y="4" width="20" height="20" rx="3" stroke="currentColor" stroke-width="1.5"/><path d="M4 10H24M10 10V24" stroke="currentColor" stroke-width="1.5"/></svg>
+          </div>
+          <h3 class="service-card-title">UX Research & Wireframing</h3>
+          <p class="service-card-body">User flow mapping, information architecture, low-fi wireframes, WCAG accessibility audits, and usability testing parameters.</p>
+          <ul class="service-card-tags" aria-label="Service details">
+            <li>Journey Mapping</li>
+            <li>WCAG Audit</li>
+            <li>Prototyping</li>
+          </ul>
+        </article>
+
+        <article class="service-card reveal reveal--delay-2" tabindex="0" aria-label="UI Design and Visual Identity service">
+          <div class="service-card-num" aria-hidden="true">03</div>
+          <div class="service-card-icon" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M14 4L24 14L14 24L4 14L14 4Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><circle cx="14" cy="14" r="3" stroke="currentColor" stroke-width="1.5"/></svg>
+          </div>
+          <h3 class="service-card-title">UI Design & Visual Identity</h3>
+          <p class="service-card-body">Design systems, atomic components, color theory, typography scales, iconography, dark/light mode, and high-fidelity mockups.</p>
+          <ul class="service-card-tags" aria-label="Service details">
+            <li>Design System</li>
+            <li>Dark/Light Mode</li>
+            <li>Brand Voice</li>
+          </ul>
+        </article>
+
+        <article class="service-card reveal" tabindex="0" aria-label="Full Stack Development service">
+          <div class="service-card-num" aria-hidden="true">04</div>
+          <div class="service-card-icon" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M8 10L4 14L8 18M20 10L24 14L20 18M16 6L12 22" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3 class="service-card-title">Full Stack Development</h3>
+          <p class="service-card-body">React, Next.js, Node.js, Python, Go. REST & GraphQL APIs, microservices, background jobs, SSR, and complete frontend/backend integration.</p>
+          <ul class="service-card-tags" aria-label="Service details">
+            <li>React · Next.js</li>
+            <li>Node.js · FastAPI</li>
+            <li>GraphQL</li>
+          </ul>
+        </article>
+
+        <article class="service-card reveal reveal--delay-1" tabindex="0" aria-label="DevOps and Cloud Infrastructure service">
+          <div class="service-card-num" aria-hidden="true">05</div>
+          <div class="service-card-icon" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M6 20C4.5 19 4 17.5 4 16C4 13.5 5.5 11.5 8 11C8.5 8.5 11 7 14 7C17 7 19.5 8.5 20 11C22.5 11.5 24 13.5 24 16C24 17.5 23.5 19 22 20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M14 14V24M11 21L14 24L17 21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3 class="service-card-title">DevOps & Cloud Infrastructure</h3>
+          <p class="service-card-body">CI/CD pipelines, Docker, Kubernetes, Blue-Green deployments, AWS/GCP/Azure, auto-scaling, CDN, and secret management.</p>
+          <ul class="service-card-tags" aria-label="Service details">
+            <li>AWS · GCP · Azure</li>
+            <li>Docker · K8s</li>
+            <li>CI/CD</li>
+          </ul>
+        </article>
+
+        <article class="service-card reveal reveal--delay-2" tabindex="0" aria-label="Security and Authentication service">
+          <div class="service-card-num" aria-hidden="true">06</div>
+          <div class="service-card-icon" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M14 4L6 8V16C6 20.5 9.5 24 14 24C18.5 24 22 20.5 22 16V8L14 4Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M10 14L13 17L18 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3 class="service-card-title">Security & Authentication</h3>
+          <p class="service-card-body">JWT, OAuth2, MFA, RBAC, HTTPS/TLS, XSS/CSRF protection, CSP headers, SQL injection prevention, and audit log maintenance.</p>
+          <ul class="service-card-tags" aria-label="Service details">
+            <li>JWT · OAuth2</li>
+            <li>MFA · RBAC</li>
+            <li>SOC2 Readiness</li>
+          </ul>
+        </article>
+
+        <article class="service-card reveal" tabindex="0" aria-label="Testing and Quality Assurance service">
+          <div class="service-card-num" aria-hidden="true">07</div>
+          <div class="service-card-icon" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M8 14L12 18L20 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="14" cy="14" r="10" stroke="currentColor" stroke-width="1.5"/></svg>
+          </div>
+          <h3 class="service-card-title">Testing & QA</h3>
+          <p class="service-card-body">Unit, integration, E2E (Cypress/Playwright), regression, UAT, cross-browser, load testing, code coverage, and Lighthouse score targeting.</p>
+          <ul class="service-card-tags" aria-label="Service details">
+            <li>Jest · Playwright</li>
+            <li>Load Testing</li>
+            <li>Lighthouse 100</li>
+          </ul>
+        </article>
+
+        <article class="service-card reveal reveal--delay-1" tabindex="0" aria-label="Analytics and CMS service">
+          <div class="service-card-num" aria-hidden="true">08</div>
+          <div class="service-card-icon" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M4 22V16M10 22V10M16 22V14M22 22V6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </div>
+          <h3 class="service-card-title">Analytics & CMS</h3>
+          <p class="service-card-body">GA4, Mixpanel, Hotjar, Sentry, Headless CMS (Strapi/Sanity/Contentful), i18n, scheduled publishing, and GDPR-compliant dashboards.</p>
+          <ul class="service-card-tags" aria-label="Service details">
+            <li>GA4 · Mixpanel</li>
+            <li>Headless CMS</li>
+            <li>GDPR Ready</li>
+          </ul>
+        </article>
+
+        <article class="service-card reveal reveal--delay-2" tabindex="0" aria-label="Maintenance and Scaling service">
+          <div class="service-card-num" aria-hidden="true">09</div>
+          <div class="service-card-icon" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M14 4V8M14 20V24M4 14H8M20 14H24M6.34 6.34L9.17 9.17M18.83 18.83L21.66 21.66M21.66 6.34L18.83 9.17M9.17 18.83L6.34 21.66" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="14" cy="14" r="4" stroke="currentColor" stroke-width="1.5"/></svg>
+          </div>
+          <h3 class="service-card-title">Scaling & Maintenance</h3>
+          <p class="service-card-body">SLA-backed support tiers, 24/7 monitoring, database sharding, microservices decoupling, disaster recovery, and dedicated account manager.</p>
+          <ul class="service-card-tags" aria-label="Service details">
+            <li>SLA Support</li>
+            <li>24/7 Monitoring</li>
+            <li>Auto-Scaling</li>
+          </ul>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════
+       TECH STACK
+  ════════════════════════════ -->
+  <section class="stack" id="stack" aria-labelledby="stack-heading">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag reveal">Technology</span>
+        <h2 class="section-heading reveal reveal--delay-1" id="stack-heading">
+          Enterprise-Grade<br/>Stack, Always.
+        </h2>
+      </div>
+
+      <div class="stack-grid">
+
+        <div class="stack-group reveal">
+          <h3 class="stack-group-title">
+            <span class="stack-group-icon" aria-hidden="true">⬡</span>
+            Frontend
+          </h3>
+          <ul class="stack-list" role="list">
+            <li>React · Next.js · Vue.js</li>
+            <li>TypeScript</li>
+            <li>Redux / Zustand / Context API</li>
+            <li>Tailwind CSS / Styled-Components</li>
+            <li>Vite / Webpack / Turbopack</li>
+            <li>PWA + Offline Support</li>
+          </ul>
+        </div>
+
+        <div class="stack-group reveal reveal--delay-1">
+          <h3 class="stack-group-title">
+            <span class="stack-group-icon" aria-hidden="true">⬡</span>
+            Backend
+          </h3>
+          <ul class="stack-list" role="list">
+            <li>Node.js · Python · Go</li>
+            <li>Express · FastAPI</li>
+            <li>REST APIs & GraphQL</li>
+            <li>Microservices & Monolith</li>
+            <li>Bull / Celery Job Queues</li>
+            <li>gRPC Internal Services</li>
+          </ul>
+        </div>
+
+        <div class="stack-group reveal reveal--delay-2">
+          <h3 class="stack-group-title">
+            <span class="stack-group-icon" aria-hidden="true">⬡</span>
+            Database
+          </h3>
+          <ul class="stack-list" role="list">
+            <li>PostgreSQL · MongoDB</li>
+            <li>Redis · MySQL</li>
+            <li>Prisma Migrations</li>
+            <li>Connection Pooling</li>
+            <li>Read/Write Replicas</li>
+            <li>Query Optimization</li>
+          </ul>
+        </div>
+
+        <div class="stack-group reveal">
+          <h3 class="stack-group-title">
+            <span class="stack-group-icon" aria-hidden="true">⬡</span>
+            Mobile
+          </h3>
+          <ul class="stack-list" role="list">
+            <li>React Native · Expo</li>
+            <li>Capacitor</li>
+            <li>Mobile-First CSS</li>
+            <li>Touch UI Elements</li>
+            <li>Offline Mode & Sync</li>
+            <li>Adaptive Image Serving</li>
+          </ul>
+        </div>
+
+        <div class="stack-group reveal reveal--delay-1">
+          <h3 class="stack-group-title">
+            <span class="stack-group-icon" aria-hidden="true">⬡</span>
+            DevOps & Cloud
+          </h3>
+          <ul class="stack-list" role="list">
+            <li>AWS · GCP · Azure</li>
+            <li>Docker · Kubernetes</li>
+            <li>GitHub Actions / GitLab CI</li>
+            <li>Blue-Green Deployments</li>
+            <li>CloudFront CDN</li>
+            <li>Vault / AWS SSM</li>
+          </ul>
+        </div>
+
+        <div class="stack-group reveal reveal--delay-2">
+          <h3 class="stack-group-title">
+            <span class="stack-group-icon" aria-hidden="true">⬡</span>
+            Tooling
+          </h3>
+          <ul class="stack-list" role="list">
+            <li>Git · Jira · Figma</li>
+            <li>Postman · Sentry</li>
+            <li>Swagger API Docs</li>
+            <li>LogRocket</li>
+            <li>Hotjar · Mixpanel</li>
+            <li>Stripe · Twilio · SendGrid</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════
+       PROCESS
+  ════════════════════════════ -->
+  <section class="process" id="process" aria-labelledby="process-heading">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag reveal">How We Work</span>
+        <h2 class="section-heading reveal reveal--delay-1" id="process-heading">
+          From Idea to<br/>Live Product.
+        </h2>
+        <p class="section-intro reveal reveal--delay-2">
+          A battle-tested delivery process across every project — no surprises, full transparency.
+        </p>
+      </div>
+
+      <ol class="process-steps" aria-label="Project delivery phases">
+        <li class="process-step reveal">
+          <div class="process-step-num" aria-hidden="true">01</div>
+          <div class="process-step-content">
+            <h3>Discovery & Strategy</h3>
+            <p>Deep-dive into your goals, users, competitors, and constraints. We define KPIs, scope, milestones, and risk mitigation before writing a single line.</p>
+          </div>
+          <div class="process-step-arrow" aria-hidden="true">→</div>
+        </li>
+
+        <li class="process-step reveal reveal--delay-1">
+          <div class="process-step-num" aria-hidden="true">02</div>
+          <div class="process-step-content">
+            <h3>Design & Prototype</h3>
+            <p>User flows, wireframes, high-fidelity mockups, and interactive prototypes. WCAG-compliant from the first pixel.</p>
+          </div>
+          <div class="process-step-arrow" aria-hidden="true">→</div>
+        </li>
+
+        <li class="process-step reveal reveal--delay-2">
+          <div class="process-step-num" aria-hidden="true">03</div>
+          <div class="process-step-content">
+            <h3>Development</h3>
+            <p>Iterative sprints with daily standups. Full-stack implementation with code reviews, testing, and security audits at every PR.</p>
+          </div>
+          <div class="process-step-arrow" aria-hidden="true">→</div>
+        </li>
+
+        <li class="process-step reveal">
+          <div class="process-step-num" aria-hidden="true">04</div>
+          <div class="process-step-content">
+            <h3>QA & Performance</h3>
+            <p>E2E testing, load testing, Lighthouse 100 target, Core Web Vitals optimization, and cross-browser verification.</p>
+          </div>
+          <div class="process-step-arrow" aria-hidden="true">→</div>
+        </li>
+
+        <li class="process-step reveal reveal--delay-1">
+          <div class="process-step-num" aria-hidden="true">05</div>
+          <div class="process-step-content">
+            <h3>Deployment & Launch</h3>
+            <p>Blue-Green deployments, CI/CD pipelines, cloud provisioning, CDN setup, and go-live support.</p>
+          </div>
+          <div class="process-step-arrow" aria-hidden="true">→</div>
+        </li>
+
+        <li class="process-step reveal reveal--delay-2">
+          <div class="process-step-num" aria-hidden="true">06</div>
+          <div class="process-step-content">
+            <h3>Ongoing Maintenance</h3>
+            <p>SLA-backed monitoring, 24/7 alerts, framework upgrades, disaster recovery, and a dedicated account manager for your peace of mind.</p>
+          </div>
+          <div class="process-step-arrow process-step-arrow--end" aria-hidden="true">✓</div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════
+       METRICS / QUALITY
+  ════════════════════════════ -->
+  <section class="metrics" id="metrics" aria-labelledby="metrics-heading">
+    <div class="container">
+      <div class="metrics-inner">
+        <div class="metrics-left">
+          <span class="section-tag reveal">Quality Benchmarks</span>
+          <h2 class="section-heading reveal reveal--delay-1" id="metrics-heading">
+            Numbers That<br/>Actually Matter.
+          </h2>
+          <p class="section-body reveal reveal--delay-2">
+            Every project we ship is held to enterprise-grade quality benchmarks.
+            These aren't aspirational — they're contractual.
+          </p>
+        </div>
+
+        <div class="metrics-right">
+          <div class="metric-card reveal">
+            <div class="metric-value">100</div>
+            <div class="metric-label">Lighthouse Score Target</div>
+            <div class="metric-bar"><div class="metric-bar-fill" data-width="100"></div></div>
+          </div>
+
+          <div class="metric-card reveal reveal--delay-1">
+            <div class="metric-value">&lt;200ms</div>
+            <div class="metric-label">API Response Time</div>
+            <div class="metric-bar"><div class="metric-bar-fill" data-width="92"></div></div>
+          </div>
+
+          <div class="metric-card reveal reveal--delay-2">
+            <div class="metric-value">99.9%</div>
+            <div class="metric-label">Uptime SLA</div>
+            <div class="metric-bar"><div class="metric-bar-fill" data-width="99"></div></div>
+          </div>
+
+          <div class="metric-card reveal">
+            <div class="metric-value">WCAG 2.1</div>
+            <div class="metric-label">Accessibility Standard</div>
+            <div class="metric-bar"><div class="metric-bar-fill" data-width="95"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════
+       CONTACT
+  ════════════════════════════ -->
+  <section class="contact" id="contact" aria-labelledby="contact-heading">
+    <div class="container">
+      <div class="contact-inner">
+        <span class="section-tag reveal">Get In Touch</span>
+        <h2 class="contact-heading reveal reveal--delay-1" id="contact-heading">
+          Let's Build Something<br/>Extraordinary Together.
+        </h2>
+        <p class="contact-sub reveal reveal--delay-2">
+          Have a project in mind? Reach out and let's talk architecture, timelines, and what it takes to launch something remarkable.
+        </p>
+
+        <div class="contact-actions reveal reveal--delay-3">
+          <a href="mailto:hello.xuneel@gmail.com" class="btn-primary btn-primary--lg">
+            <span>hello.xuneel@gmail.com</span>
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
+              <path d="M3 9H15M15 9L9 3M15 9L9 15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </div>
+
+        <div class="contact-details reveal reveal--delay-4">
+          <div class="contact-detail">
+            <span class="contact-detail-label">Studio</span>
+            <span class="contact-detail-value">Xuneel Services</span>
+          </div>
+          <div class="contact-divider" aria-hidden="true"></div>
+          <div class="contact-detail">
+            <span class="contact-detail-label">Lead Architect</span>
+            <span class="contact-detail-value">Sunil Sharma</span>
+          </div>
+          <div class="contact-divider" aria-hidden="true"></div>
+          <div class="contact-detail">
+            <span class="contact-detail-label">Availability</span>
+            <span class="contact-detail-value contact-detail-value--green">
+              <span class="avail-dot" aria-hidden="true"></span>
+              Open to Projects
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════
+       FOOTER
+  ════════════════════════════ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <a href="#" class="nav-logo footer-logo" aria-label="Xuneel Services">
+            <svg class="logo-icon" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M5 5L25 30L5 55H18L30 38L42 55H55L35 30L55 5H42L30 22L18 5H5Z" fill="currentColor"/>
+            </svg>
+            <span class="logo-wordmark">XUNEEL</span>
+          </a>
+          <p class="footer-tagline">Full Stack App Development Studio</p>
+          <p class="footer-tagline footer-tagline--sub">300+ Micro-Details · 30 Service Domains</p>
+        </div>
+
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <div class="footer-nav-col">
+            <span class="footer-nav-heading">Services</span>
+            <ul role="list">
+              <li><a href="#services">Discovery & Strategy</a></li>
+              <li><a href="#services">UX/UI Design</a></li>
+              <li><a href="#services">Full Stack Dev</a></li>
+              <li><a href="#services">DevOps & Cloud</a></li>
+              <li><a href="#services">QA & Testing</a></li>
+              <li><a href="#services">Maintenance</a></li>
+            </ul>
+          </div>
+          <div class="footer-nav-col">
+            <span class="footer-nav-heading">Stack</span>
+            <ul role="list">
+              <li><a href="#stack">React · Next.js</a></li>
+              <li><a href="#stack">Node.js · Python</a></li>
+              <li><a href="#stack">AWS · GCP · Azure</a></li>
+              <li><a href="#stack">PostgreSQL · Redis</a></li>
+              <li><a href="#stack">Docker · K8s</a></li>
+              <li><a href="#stack">React Native</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copy">© 2026 Xuneel Services. All rights reserved. Sunil Sharma, Founder & Lead Architect.</p>
+        <p class="footer-copy">
+          <a href="mailto:hello.xuneel@gmail.com">hello.xuneel@gmail.com</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="app.js" defer></script>
+
+</body>
+</html>
